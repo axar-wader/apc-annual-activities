@@ -12,16 +12,37 @@
       amp-story {
         font-family: 'Arial', sans-serif;
       }
-      .page-background {
+      .page-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: 20px;
         background-color: #ffffff;
       }
       .image-container {
-        width: 90%;
+        width: 75%;
+        max-width: 600px;
         margin: 0 auto;
         border: 8px solid #FFD700;
         border-radius: 8px;
         overflow: hidden;
+      }
+      /* 3:4 aspect ratio container */
+      .image-aspect-ratio {
         position: relative;
+        width: 100%;
+        padding-bottom: 133.33%; /* 4:3 aspect ratio */
+        overflow: hidden;
+      }
+      .image-aspect-ratio amp-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
       .person-name {
         text-align: center;
@@ -30,52 +51,49 @@
         color: #333333;
         margin-top: 20px;
         font-family: 'Georgia', serif;
+        width: 100%;
       }
       .person-title {
         text-align: center;
         font-size: 18px;
         color: #666666;
-        margin-top: 5px;
+        margin: 5px 0 20px 0;
         font-family: 'Arial', sans-serif;
+        width: 100%;
+      }
+      .video-button {
+        background-color: #FF0000;
+        color: #FFFFFF;
+        padding: 12px 24px;
+        border-radius: 25px;
+        font-weight: bold;
+        margin-top: 15px;
+        text-decoration: none;
+        text-align: center;
+        width: 75%;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      }
+      .button-icon {
+        margin-right: 10px;
+        width: 24px;
+        height: 24px;
       }
       .cover-title {
         text-align: center;
         font-size: 36px;
         font-weight: bold;
         color: #333333;
-        padding: 20px;
-        background-color: rgba(255, 255, 255, 0.9);
-        border-radius: 8px;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
       }
       .cover-subtitle {
         text-align: center;
         font-size: 24px;
         color: #666666;
-        padding: 15px;
-        background-color: rgba(255, 255, 255, 0.9);
-        border-radius: 8px;
-      }
-      .content-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        padding: 20px;
-        box-sizing: border-box;
-      }
-      .button {
-        background-color: #FFD700;
-        color: #333333;
-        padding: 12px 24px;
-        border-radius: 25px;
-        font-weight: bold;
-        margin-top: 20px;
-        text-decoration: none;
-        text-align: center;
-        width: 80%;
-        font-size: 18px;
+        margin-bottom: 30px;
       }
     </style>
   </head>
@@ -88,91 +106,84 @@
       
       <!-- Cover Page -->
       <amp-story-page id="cover">
-        <amp-story-grid-layer template="fill" class="page-background">
+        <amp-story-grid-layer template="fill">
           <div style="background-color: #ffffff;"></div>
         </amp-story-grid-layer>
         <amp-story-grid-layer template="vertical">
-          <div class="content-wrapper">
-            <div class="image-container">
-              <amp-img src="/api/placeholder/800/500" width="800" height="500" layout="responsive" alt="APC Annual Activities"></amp-img>
-            </div>
+          <div class="page-wrapper">
             <h1 class="cover-title">APC ANNUAL ACTIVITIES</h1>
             <h2 class="cover-subtitle">Excellence in Leadership</h2>
-            <a href="https://www.example.com/activities" class="button">Explore Our Work</a>
+            <div class="image-container">
+              <div class="image-aspect-ratio">
+                <amp-img src="/api/placeholder/600/800" width="600" height="800" layout="fill" alt="APC Annual Activities"></amp-img>
+              </div>
+            </div>
+            <a href="https://www.youtube.com/watch?v=kkWgk_tZtRA" target="_blank" class="video-button">
+              <span class="button-icon">▶</span> Watch Intro Video
+            </a>
           </div>
         </amp-story-grid-layer>
       </amp-story-page>
 
       <!-- Page 1 -->
       <amp-story-page id="page1">
-        <amp-story-grid-layer template="fill" class="page-background">
+        <amp-story-grid-layer template="fill">
           <div style="background-color: #ffffff;"></div>
         </amp-story-grid-layer>
         <amp-story-grid-layer template="vertical">
-          <div class="content-wrapper">
+          <div class="page-wrapper">
             <div class="image-container">
-              <a href="https://www.example.com/john-doe">
-                <amp-img src="/api/placeholder/800/800" width="800" height="800" layout="responsive" alt="John Doe"></amp-img>
-              </a>
+              <div class="image-aspect-ratio">
+                <amp-img src="/api/placeholder/600/800" width="600" height="800" layout="fill" alt="John Doe"></amp-img>
+              </div>
             </div>
             <h2 class="person-name">John Doe</h2>
             <p class="person-title">Executive Director</p>
-            <a href="https://www.example.com/john-doe-profile" class="button">View Profile</a>
+            <a href="https://www.youtube.com/watch?v=kkWgk_tZtRA" target="_blank" class="video-button">
+              <span class="button-icon">▶</span> Watch John's Video
+            </a>
           </div>
         </amp-story-grid-layer>
       </amp-story-page>
 
       <!-- Page 2 -->
       <amp-story-page id="page2">
-        <amp-story-grid-layer template="fill" class="page-background">
+        <amp-story-grid-layer template="fill">
           <div style="background-color: #ffffff;"></div>
         </amp-story-grid-layer>
         <amp-story-grid-layer template="vertical">
-          <div class="content-wrapper">
+          <div class="page-wrapper">
             <div class="image-container">
-              <a href="https://www.example.com/jane-smith">
-                <amp-img src="/api/placeholder/800/800" width="800" height="800" layout="responsive" alt="Jane Smith"></amp-img>
-              </a>
+              <div class="image-aspect-ratio">
+                <amp-img src="/api/placeholder/600/800" width="600" height="800" layout="fill" alt="Jane Smith"></amp-img>
+              </div>
             </div>
             <h2 class="person-name">Jane Smith</h2>
             <p class="person-title">Operations Manager</p>
-            <a href="https://www.example.com/jane-smith-profile" class="button">View Profile</a>
+            <a href="https://www.youtube.com/watch?v=kkWgk_tZtRA" target="_blank" class="video-button">
+              <span class="button-icon">▶</span> Watch Jane's Video
+            </a>
           </div>
         </amp-story-grid-layer>
       </amp-story-page>
 
       <!-- Page 3 -->
       <amp-story-page id="page3">
-        <amp-story-grid-layer template="fill" class="page-background">
+        <amp-story-grid-layer template="fill">
           <div style="background-color: #ffffff;"></div>
         </amp-story-grid-layer>
         <amp-story-grid-layer template="vertical">
-          <div class="content-wrapper">
+          <div class="page-wrapper">
             <div class="image-container">
-              <a href="https://www.example.com/alex-johnson">
-                <amp-img src="/api/placeholder/800/800" width="800" height="800" layout="responsive" alt="Alex Johnson"></amp-img>
-              </a>
+              <div class="image-aspect-ratio">
+                <amp-img src="/api/placeholder/600/800" width="600" height="800" layout="fill" alt="Alex Johnson"></amp-img>
+              </div>
             </div>
             <h2 class="person-name">Alex Johnson</h2>
             <p class="person-title">Community Liaison</p>
-            <a href="https://www.example.com/alex-johnson-profile" class="button">View Profile</a>
-          </div>
-        </amp-story-grid-layer>
-      </amp-story-page>
-
-      <!-- Final Page -->
-      <amp-story-page id="contact">
-        <amp-story-grid-layer template="fill" class="page-background">
-          <div style="background-color: #ffffff;"></div>
-        </amp-story-grid-layer>
-        <amp-story-grid-layer template="vertical">
-          <div class="content-wrapper">
-            <div class="image-container">
-              <amp-img src="/api/placeholder/800/500" width="800" height="500" layout="responsive" alt="Contact Us"></amp-img>
-            </div>
-            <h2 class="person-name">Contact Us</h2>
-            <p class="person-title">info@apcorganization.org</p>
-            <a href="https://www.example.com/contact" class="button">Get In Touch</a>
+            <a href="https://www.youtube.com/watch?v=kkWgk_tZtRA" target="_blank" class="video-button">
+              <span class="button-icon">▶</span> Watch Alex's Video
+            </a>
           </div>
         </amp-story-grid-layer>
       </amp-story-page>
