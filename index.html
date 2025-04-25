@@ -9,20 +9,38 @@
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-story"
             src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
+
     <style amp-custom>
       amp-story {
         font-family: 'Arial', sans-serif;
+        color: #ffffff;
       }
-      .centered-text {
-        text-align: center;
+
+      .full-bleed-img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .info-box {
+        position: absolute;
+        bottom: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        padding: 15px 25px;
+        border-radius: 25px;
         font-size: 24px;
-        color: #fff;
-        background: rgba(0, 0, 0, 0.6);
-        padding: 10px;
-        margin-top: 10px;
+        font-weight: bold;
+        text-align: center;
       }
-      a {
-        text-decoration: none;
+
+      .clickable-area {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
       }
     </style>
   </head>
@@ -35,31 +53,52 @@
 
       <!-- Page 1 -->
       <amp-story-page id="page1">
+        <amp-story-grid-layer template="fill">
+          <amp-img class="full-bleed-img"
+                   src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdXB3azYxODg5NzQ0LXdpa2ltZWRpYS1pbWFnZS1qb2I1NzItMS5qcGc.jpg"
+                   width="1080"
+                   height="1920"
+                   layout="responsive"
+                   alt="John Doe">
+          </amp-img>
+        </amp-story-grid-layer>
         <amp-story-grid-layer template="vertical">
-          <a href="https://www.youtube.com/watch?v=kkWgk_tZtRA" target="_blank">
-            <amp-img src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdXB3azYxODg5NzQ0LXdpa2ltZWRpYS1pbWFnZS1qb2I1NzItMS5qcGc.jpg" width="1080" height="1920" layout="responsive"></amp-img>
-          </a>
-          <div class="centered-text">John Doe</div>
+          <a class="clickable-area" href="https://www.youtube.com/watch?v=kkWgk_tZtRA" target="_blank"></a>
+          <div class="info-box">John Doe</div>
         </amp-story-grid-layer>
       </amp-story-page>
 
       <!-- Page 2 -->
       <amp-story-page id="page2">
+        <amp-story-grid-layer template="fill">
+          <amp-img class="full-bleed-img"
+                   src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdXB3azYxODg5NzQ0LXdpa2ltZWRpYS1pbWFnZS1qb2I1NzItMS5qcGc.jpg"
+                   width="1080"
+                   height="1920"
+                   layout="responsive"
+                   alt="Jane Smith">
+          </amp-img>
+        </amp-story-grid-layer>
         <amp-story-grid-layer template="vertical">
-          <a href="https://www.youtube.com/watch?v=kkWgk_tZtRA" target="_blank">
-            <amp-img src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdXB3azYxODg5NzQ0LXdpa2ltZWRpYS1pbWFnZS1qb2I1NzItMS5qcGc.jpg" width="1080" height="1920" layout="responsive"></amp-img>
-          </a>
-          <div class="centered-text">Jane Smith</div>
+          <a class="clickable-area" href="https://www.youtube.com/watch?v=kkWgk_tZtRA" target="_blank"></a>
+          <div class="info-box">Jane Smith</div>
         </amp-story-grid-layer>
       </amp-story-page>
 
       <!-- Page 3 -->
       <amp-story-page id="page3">
+        <amp-story-grid-layer template="fill">
+          <amp-img class="full-bleed-img"
+                   src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdXB3azYxODg5NzQ0LXdpa2ltZWRpYS1pbWFnZS1qb2I1NzItMS5qcGc.jpg"
+                   width="1080"
+                   height="1920"
+                   layout="responsive"
+                   alt="Alex Johnson">
+          </amp-img>
+        </amp-story-grid-layer>
         <amp-story-grid-layer template="vertical">
-          <a href="https://www.youtube.com/watch?v=kkWgk_tZtRA" target="_blank">
-            <amp-img src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdXB3azYxODg5NzQ0LXdpa2ltZWRpYS1pbWFnZS1qb2I1NzItMS5qcGc.jpg" width="1080" height="1920" layout="responsive"></amp-img>
-          </a>
-          <div class="centered-text">Alex Johnson</div>
+          <a class="clickable-area" href="https://www.youtube.com/watch?v=kkWgk_tZtRA" target="_blank"></a>
+          <div class="info-box">Alex Johnson</div>
         </amp-story-grid-layer>
       </amp-story-page>
 
