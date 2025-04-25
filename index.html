@@ -2,59 +2,69 @@
 <html ⚡>
   <head>
     <meta charset="utf-8" />
-    <title>APC NADIAD</title>
+    <title>APC ANNUAL ACTIVITIES</title>
     <link rel="canonical" href="your-canonical-url.html" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <style amp-boilerplate>body{visibility:hidden}</style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-story"
             src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
+    <script async custom-element="amp-img"
+            src="https://cdn.ampproject.org/v0/amp-img-0.1.js"></script>
     <style amp-custom>
-      amp-story { font-family: 'Arial', sans-serif; }
+      amp-story {
+        font-family: 'Arial', sans-serif;
+      }
+      .centered-text {
+        text-align: center;
+        font-size: 24px;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 10px;
+        margin-top: 10px;
+      }
+      a {
+        text-decoration: none;
+      }
     </style>
   </head>
   <body>
     <amp-story standalone
-               title="My First Story"
+               title="APC Annual Activities"
                publisher="Your Name"
                publisher-logo-src="logo.png"
                poster-portrait-src="cover.jpg">
+               
       <!-- Page 1 -->
       <amp-story-page id="page1">
-        <amp-story-grid-layer template="fill">
-          <amp-img src="https://res.cloudinary.com/dkvtnjc2f/image/upload/p_auto,q_auto/v1744916094/qbpbgpmrlknzqyoglhfl.jpg" width="1080" height="1920" layout="responsive"></amp-img>
+        <amp-story-grid-layer template="vertical">
+          <a href="https://example.com/video1" target="_blank">
+            <amp-img src="https://via.placeholder.com/1080x1920" width="1080" height="1920" layout="responsive"></amp-img>
+          </a>
+          <div class="centered-text">John Doe</div>
         </amp-story-grid-layer>
       </amp-story-page>
+
       <!-- Page 2 -->
       <amp-story-page id="page2">
-        <amp-story-grid-layer template="fill">
-          <amp-img src="https://res.cloudinary.com/dkvtnjc2f/image/upload/p_auto,q_auto/v1744916096/ma3yn5hfydkenfdz1z25.jpg" width="1080" height="1920" layout="responsive"></amp-img>
+        <amp-story-grid-layer template="vertical">
+          <a href="https://example.com/video2" target="_blank">
+            <amp-img src="https://via.placeholder.com/1080x1920" width="1080" height="1920" layout="responsive"></amp-img>
+          </a>
+          <div class="centered-text">Jane Smith</div>
         </amp-story-grid-layer>
       </amp-story-page>
+
       <!-- Page 3 -->
       <amp-story-page id="page3">
-        <amp-story-grid-layer template="fill">
-          <amp-img src="https://res.cloudinary.com/dkvtnjc2f/image/upload/p_auto,q_auto/v1744916093/qlypylmbglyq27v535ij.jpg" width="1080" height="1920" layout="responsive"></amp-img>
+        <amp-story-grid-layer template="vertical">
+          <a href="https://example.com/video3" target="_blank">
+            <amp-img src="https://via.placeholder.com/1080x1920" width="1080" height="1920" layout="responsive"></amp-img>
+          </a>
+          <div class="centered-text">Alex Johnson</div>
         </amp-story-grid-layer>
       </amp-story-page>
-      <!-- Page 4 -->
-      <amp-story-page id="page4">
-        <amp-story-grid-layer template="fill">
-          <amp-img src="https://res.cloudinary.com/dkvtnjc2f/image/upload/p_auto,q_auto/v1744916093/yspkvdbpxogptqjdkugt.jpg" width="1080" height="1920" layout="responsive"></amp-img>
-        </amp-story-grid-layer>
-      </amp-story-page>
-      <!-- Page 5 -->
-      <amp-story-page id="page5">
-        <amp-story-grid-layer template="fill">
-          <amp-img src="https://res.cloudinary.com/dkvtnjc2f/image/upload/p_auto,q_auto/v1744917207/zupjmfynbdqqurzjm94t.jpg" width="1080" height="1920" layout="responsive"></amp-img>
-        </amp-story-grid-layer>
-      </amp-story-page>
-      <!-- Page 6 -->
-      <amp-story-page id="page6">
-        <amp-story-grid-layer template="fill">
-          <amp-img src="img6.jpg" width="720" height="1280" layout="responsive"></amp-img>
-        </amp-story-grid-layer>
-      </amp-story-page>
+
     </amp-story>
   </body>
 </html>
