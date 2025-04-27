@@ -29,22 +29,28 @@
         border: 8px solid #FFD700;
         border-radius: 8px;
         overflow: hidden;
-        margin-bottom: 20px
-      }
-      /* 3:4 aspect ratio container */
-      .image-aspect-ratio {
+        margin-bottom: 20px;
+        height: 50vh; /* Fixed height container */
         position: relative;
-        width: 100%;
-        padding-bottom: 133.33%; /* 4:3 aspect ratio */
-        overflow: hidden;
       }
-      .image-aspect-ratio amp-img {
+      /* Modified to fit height exactly */
+      .image-aspect-ratio {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        object-fit: fill;
+        overflow: hidden;
+      }
+      .image-aspect-ratio amp-img {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        width: auto;
+        max-width: none;
+        object-fit: cover;
       }
       .person-name {
         text-align: center;
@@ -113,7 +119,7 @@
                poster-portrait-src="/api/placeholder/1080/1920">
       
       <!-- Page 1 -->
-      <amp-story-page id="cover">
+      <amp-story-page id="page1">
         <amp-story-grid-layer template="fill">
           <div style="background-color: #ffffff;"></div>
         </amp-story-grid-layer>
@@ -123,7 +129,7 @@
             <h2 class="cover-subtitle">Sports Day</h2>
             <div class="image-container">
               <div class="image-aspect-ratio">
-                <amp-img src="https://res.cloudinary.com/dkvtnjc2f/image/upload/p_auto,q_auto/v1745766437/gh6mjk5o4arkzkbg5r1w.jpg" width="600" height="800" layout="fill" alt="APC Annual Activities"></amp-img>
+                <amp-img src="https://res.cloudinary.com/dkvtnjc2f/image/upload/p_auto,q_auto/v1745766437/gh6mjk5o4arkzkbg5r1w.jpg" width="1920" height="1080" layout="fixed-height" height="100%" alt="APC Annual Activities"></amp-img>
               </div>
             </div>
             <a href="https://www.youtube.com/watch?v=U25UZ-1rAI4" class="video-button">
@@ -134,7 +140,7 @@
       </amp-story-page>
 
       <!-- Page 2 -->
-      <amp-story-page id="cover">
+      <amp-story-page id="page2">
         <amp-story-grid-layer template="fill">
           <div style="background-color: #ffffff;"></div>
         </amp-story-grid-layer>
@@ -144,7 +150,7 @@
             <h2 class="cover-subtitle">Fuldol Celebration</h2>
             <div class="image-container">
               <div class="image-aspect-ratio">
-                <amp-img src="/api/placeholder/600/800" width="600" height="800" layout="fill" alt="APC Annual Activities"></amp-img>
+                <amp-img src="/api/placeholder/600/800" width="600" height="800" layout="fixed-height" height="100%" alt="APC Annual Activities"></amp-img>
               </div>
             </div>
             <a href="https://www.youtube.com/watch?v=MXxqSy0zcY4" class="video-button">
@@ -155,7 +161,7 @@
       </amp-story-page>
 
       <!-- Page 3 -->
-      <amp-story-page id="cover">
+      <amp-story-page id="page3">
         <amp-story-grid-layer template="fill">
           <div style="background-color: #ffffff;"></div>
         </amp-story-grid-layer>
@@ -165,7 +171,7 @@
             <h2 class="cover-subtitle">Yoga Day Celebration</h2>
             <div class="image-container">
               <div class="image-aspect-ratio">
-                <amp-img src="/api/placeholder/600/800" width="600" height="800" layout="fill" alt="APC Annual Activities"></amp-img>
+                <amp-img src="/api/placeholder/600/800" width="600" height="800" layout="fixed-height" height="100%" alt="APC Annual Activities"></amp-img>
               </div>
             </div>
             <a href="https://www.youtube.com/watch?v=i9hh5O68S1o" class="video-button">
@@ -176,7 +182,7 @@
       </amp-story-page>
 
       <!-- Page 4 -->
-      <amp-story-page id="cover">
+      <amp-story-page id="page4">
         <amp-story-grid-layer template="fill">
           <div style="background-color: #ffffff;"></div>
         </amp-story-grid-layer>
@@ -186,7 +192,7 @@
             <h2 class="cover-subtitle">SSP Yatra</h2>
             <div class="image-container">
               <div class="image-aspect-ratio">
-                <amp-img src="/api/placeholder/600/800" width="600" height="800" layout="fill" alt="APC Annual Activities"></amp-img>
+                <amp-img src="/api/placeholder/600/800" width="600" height="800" layout="fixed-height" height="100%" alt="APC Annual Activities"></amp-img>
               </div>
             </div>
             <a href="https://www.youtube.com/watch?v=TleA1-xrMps" class="video-button">
@@ -197,7 +203,7 @@
       </amp-story-page>
       
       <!-- Page 5 -->
-      <amp-story-page id="cover">
+      <amp-story-page id="page5">
         <amp-story-grid-layer template="fill">
           <div style="background-color: #ffffff;"></div>
         </amp-story-grid-layer>
@@ -207,7 +213,7 @@
             <h2 class="cover-subtitle">Ganesh Utsav</h2>
             <div class="image-container">
               <div class="image-aspect-ratio">
-                <amp-img src="/api/placeholder/600/800" width="600" height="800" layout="fill" alt="APC Annual Activities"></amp-img>
+                <amp-img src="/api/placeholder/600/800" width="600" height="800" layout="fixed-height" height="100%" alt="APC Annual Activities"></amp-img>
               </div>
             </div>
             <a href="https://www.youtube.com/watch?v=fkVBizUUE88" class="video-button">
@@ -217,8 +223,8 @@
         </amp-story-grid-layer>
       </amp-story-page>
       
-      <!-- Page 1 -->
-      <amp-story-page id="cover">
+      <!-- Page 6 -->
+      <amp-story-page id="page6">
         <amp-story-grid-layer template="fill">
           <div style="background-color: #ffffff;"></div>
         </amp-story-grid-layer>
@@ -228,7 +234,7 @@
             <h2 class="cover-subtitle">Diwali & Annakut Utsav</h2>
             <div class="image-container">
               <div class="image-aspect-ratio">
-                <amp-img src="/api/placeholder/600/800" width="600" height="800" layout="fill" alt="APC Annual Activities"></amp-img>
+                <amp-img src="/api/placeholder/600/800" width="600" height="800" layout="fixed-height" height="100%" alt="APC Annual Activities"></amp-img>
               </div>
             </div>
             <a href="https://www.youtube.com/watch?v=dpUxR7oL2fw" class="video-button">
